@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: berkedanapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: berkedanapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: berkedanapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: berkedanapipelinesjavascriptdocker 
+          image: jtcontainerregistry001.azurecr.io/berkedanapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
